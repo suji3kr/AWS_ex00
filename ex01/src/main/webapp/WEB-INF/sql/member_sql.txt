@@ -1,0 +1,16 @@
+show databases;
+create database webdb;
+
+use mysql;
+select user, host from user;
+
+drop user webuser;
+
+create user dbuser@'%' identified by '12345';
+grant all privileges on webdb.* to 'dbuser'@'%';
+
+-- -------------------------------------------------------
+
+use webdb;
+
+select * from member_table;
